@@ -1,0 +1,33 @@
+{{define "login"}}
+   <html>
+     <head>
+       <title>{{.Title}}</title>
+       <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+       <link href="/assets/css/login.css" rel="stylesheet">
+       <style type="text/css">
+         body {padding-bottom: 70px;}
+         .content {margin:10px;}
+       </style>
+     </head>
+     <body>
+
+    <!-- Custom styles for this template -->
+
+    <div class="container">
+      <form action="login" method="post" class="form-signin">
+        {{if .}}
+        <div class="alert alert-danger" role="alert">
+          <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </div>
+        {{end}}
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div> <!-- /container -->
+    <html>
+{{template "footer" .}}
+{{end}}

@@ -35,7 +35,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 func loginHandler(w http.ResponseWriter, r *http.Request) {
 	email := r.FormValue("inputEmail")
 	pass := r.FormValue("inputPassword")
-	if email == "visan.ovidiu@gmail.com" && pass == "Test" {
+	if email == "test@test.com" && pass == "Test" {
 		session, err := sessionStore.Get(r, "SessionName")
 		if err != nil {
 			http.Error(w, err.Error(), 500)
